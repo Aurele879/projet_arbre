@@ -71,7 +71,7 @@ class Arbre:
         def supprimer_recursivement(noeud, parent=None):
             for fils in noeud.liste_fils[:]:  
                 supprimer_recursivement(fils, noeud)
-            if noeud.nom_racine == nom_noeud and parent is not None:
+            if noeud.nom_racine == nom_noeud and parent != None:
                 parent.liste_fils.remove(noeud)
         if self.nom_racine == nom_noeud:
             raise ValueError("Impossible de supprimer la racine de l'arbre.")
